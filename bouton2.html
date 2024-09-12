@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répétabilité</title>
+    <link rel="stylesheet" href="bout2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Répétabilité de haute tension </h2>
+        
+        <form id="repetabiliteForm">
+            <label for="kv_mesuree1">Mesure 1 :</label>
+            <input type="text" id="kv_mesuree1" name="kv_mesuree1" required>
+            
+            <label for="kv_mesuree2">Mesure 2 :</label>
+            <input type="text" id="kv_mesuree2" name="kv_mesuree2" required>
+            
+            <label for="kv_mesuree3">Mesure 3 :</label>
+            <input type="text" id="kv_mesuree3" name="kv_mesuree3" required>
+            
+            <label for="kv_mesuree4">Mesure 4 :</label>
+            <input type="text" id="kv_mesuree4" name="kv_mesuree4" required>
+            
+            <label for="kv_mesuree5">Mesure 5 :</label>
+            <input type="text" id="kv_mesuree5" name="kv_mesuree5" required>
+            
+            <button type="button" onclick="verifierRepetabilite()">Vérifier la répétabilité</button>
+            <button type="button" onclick="tracerCourbeRep()">Tracer la courbe</button>
+        </form>
+
+        <div id="resultatsContainer"></div>
+        <!-- Ajoutez un élément canvas pour le graphique de répétabilité -->
+        <canvas id="myChartRep" width="400" height="400"></canvas>
+
+    </div>
+
+    <script src="bout2.js"></script>
+</body>
+</html>

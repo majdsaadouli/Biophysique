@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Conformité</title>
+    <link rel="stylesheet" href="bout3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Répétabilité du rayonnement de sortie </h2>
+        
+        <form id="kermaForm">
+            <label for="kerma1">Kerma Mesuré 1 :</label>
+            <input type="text" id="kerma1" name="kerma1" required>
+
+            <label for="kerma2">Kerma Mesuré 2 :</label>
+            <input type="text" id="kerma2" name="kerma2" required>
+
+            <label for="kerma3">Kerma Mesuré 3 :</label>
+            <input type="text" id="kerma3" name="kerma3" required>
+
+            <label for="kerma4">Kerma Mesuré 4 :</label>
+            <input type="text" id="kerma4" name="kerma4" required>
+
+            <label for="kerma5">Kerma Mesuré 5 :</label>
+            <input type="text" id="kerma5" name="kerma5" required>
+
+            <button type="button" onclick="testerConformite()">Tester la conformité</button>
+            <button type="button" onclick="tracerCourbe()">Tracer la courbe</button>
+            <button type="button" onclick="afficherHistorique()">Historique</button>
+
+        </form>
+
+        <div id="resultatsContainer" style="display: none;">
+            <!-- Les résultats seront affichés ici par JavaScript -->
+        </div>
+        <div id="historiqueContainer" style="display: none;">
+            <!-- L'historique sera affiché ici par JavaScript -->
+        </div>
+        
+
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="bout3.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conformité de Mesures</title>
+    <link rel="stylesheet" type="text/css" href="bout4.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Linearité du rayonnement de sortie </h2>
+
+        <div id="inputSection">
+            <h3>Entrer les Couples (mAs, Kerma Mesuré)</h3>
+            <form id="inputForm">
+                <!-- Ajoutez les champs pour entrer les couples (mAs, Kerma Mesuré) ici -->
+                <label for="mas1">mAs 1 :</label>
+                <input type="text" id="mas1" name="mas1" required>
+                <label for="kermaMesure1">Kerma Mesuré 1 :</label>
+                <input type="text" id="kermaMesure1" name="kermaMesure1" required>
+
+                <label for="mas2">mAs 2 :</label>
+                <input type="text" id="mas2" name="mas2" required>
+                <label for="kermaMesure2">Kerma Mesuré 2 :</label>
+                <input type="text" id="kermaMesure2" name="kermaMesure2" required>
+
+                <label for="mas3">mAs 3 :</label>
+                <input type="text" id="mas3" name="mas3" required>
+                <label for="kermaMesure3">Kerma Mesuré 3 :</label>
+                <input type="text" id="kermaMesure3" name="kermaMesure3" required>
+
+                <label for="mas4">mAs 4 :</label>
+                <input type="text" id="mas4" name="mas4" required>
+                <label for="kermaMesure4">Kerma Mesuré 4 :</label>
+                <input type="text" id="kermaMesure4" name="kermaMesure4" required>
+
+                <label for="mas5">mAs 5 :</label>
+                <input type="text" id="mas5" name="mas5" required>
+                <label for="kermaMesure5">Kerma Mesuré 5 :</label>
+                <input type="text" id="kermaMesure5" name="kermaMesure5" required>
+            </form>
+        </div>
+
+        <div id="resultsSection" style="display: none;">
+            <h3>Résultats</h3>
+            <div id="resultatsContainer"></div>
+        </div>
+
+        <div id="buttonsSection">
+            <button type="button" onclick="testerConformite()">Tester Conformité</button>
+            <button type="button" onclick="tracerCourbe()">Tracer Courbe</button>
+            <button type="button" onclick="afficherHistorique()">Historique</button>
+        </div>
+
+        <div id="historiqueContainer" style="display: none;">
+            <!-- L'historique sera affiché ici par JavaScript -->
+        </div>
+        <canvas id="myChartRep" width="400" height="400"></canvas>
+    </div>
+
+    
+    <script src="bout4.js"></script>
+</body>
+</html>

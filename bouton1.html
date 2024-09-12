@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Radiologie</title>
+    <link rel="stylesheet" href="bout1.css">
+    
+</head>
+<body>
+
+<div class="container">
+    <h1>Exactitude de la Tension </h1>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <div class="couple">
+        <label for="kv_affichee1">KV Affichée 1:</label>
+        <input type="number" id="kv_affichee1">
+        <label for="kv_mesuree1">KV Mesurée 1:</label>
+        <input type="number" id="kv_mesuree1">
+    </div>
+
+    <div class="couple">
+        <label for="kv_affichee2">KV Affichée 2:</label>
+        <input type="number" id="kv_affichee2">
+        <label for="kv_mesuree2">KV Mesurée 2:</label>
+        <input type="number" id="kv_mesuree2">
+    </div>
+
+    <div class="couple">
+        <label for="kv_affichee3">KV Affichée 3:</label>
+        <input type="number" id="kv_affichee3">
+        <label for="kv_mesuree3">KV Mesurée 3:</label>
+        <input type="number" id="kv_mesuree3">
+    </div>
+
+    <button  onclick="verifierAcceptabilite()">Tester Acceptabilité</button>
+    <button onclick="tracerCourbe()">Tracer la courbe</button>
+    <button onclick="afficherHistorique()">Historique</button>
+
+
+
+    <div id="resultatGlobal"></div>
+
+
+    <div id="resultat1"></div>
+    <div id="resultat2"></div>
+    <div id="resultat3"></div>
+
+    <div id="critere"></div>
+
+    <!-- Ajoutez ceci à l'endroit où vous souhaitez afficher l'historique -->
+    <div id="historiqueDiv"></div>
+
+
+    <!-- Ajoutez un élément canvas pour le graphique -->
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+
+
+<script src="scriptbout1.js"></script>
+
+
+</body>
+</html>
